@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link class="nav-item" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<link class="nav-item" href="css/bootstrap.css" rel="stylesheet">
+<link class="nav-item" href="styles.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body id="backg">
+<div class="col-xs-12">
+	<a>{email}</a>
+<form>
+	<table width="100%">
+		<tr id="toplin">
+			<td class="col-xs-2"><img src="educadio.ico">&nbsp</td>
+			<td width="col-xs-2">My Panel</td>
+			<td width="col-xs-2">+ Add Course</td>
+		</tr>
+	</table>
+	<table width="100%">
+		<tr>
+			<td id="themes">
+			<ul class="nav flex-column" id="myTab" role="tablist">
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#courses" role="tab" aria-controls="courses"><img height="50" width="63" src="courses.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#workspace" role="tab" aria-controls="workspace" aria-selected="false"><img height="50" width="63" src="workspace.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users"><img height="50" width="63" src="users.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#departments" role="tab" aria-controls="departments" aria-selected="false"><img height="50" width="63" src="departments.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#uploads" role="tab" aria-controls="uploads" aria-selected="false"><img height="50" width="63" src="uploads.jpg"></a>
+				</li>
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#mobileupload" role="tab" aria-controls="mobileupload" aria-selected="false"><img height="50" width="63" src="mobileupload.jpg"></a>
+				</li>
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#activity" role="tab" aria-controls="activity" aria-selected="false"><img height="50" width="63" src="activity.jpg"></a>
+				</li>
+				<li>
+					<a id="profile-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><img height="50" width="63" src="settings.jpg"></a>
+				</li>
+			</ul>
+		</td>
+		<td id="content" class="col-xs-8">
+			<div class="sector" id="courses">COURSES</div>
+			<div class="sector" id="workspace">WORKSPACE</div>
+			<div class="sector" id="users">
+				<div class="tabs">
+					<ul class="nav tabs-nav nav-tabs justify-content-center">
+						<li class="subnav nav-item active">
+							<a class="nav-link">Users</a>
+						</li>
+						<li class="subnav nav-item">
+							<a class="nav-link">Connected</a>
+						</li>
+						<li class="subnav nav-item" id="userinfo">
+							<a class="nav-link">User</a>
+						</li>
+						<li><button class="btn" id="mainbtn">Upload users from CSV</button></li>
+					</ul>
+					<div class="tabs-box">
+						<div class="active">
+							USERS
+						</div>
+						<div>
+							CONNECTED
+						</div>
+						<div>
+							USER
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sector" id="departments">DEPARTMENTS</div>
+			<div class="sector" id="uploads">MY UPLOADS</div>
+			<div class="sector" id="mobileupload">MOBILE UPLOAD</div>
+			<div class="sector" id="activity">ACTIVITY</div>
+			<div class="sector" id="settings">SETTINGS</div>
+		</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/my-tabs.js"></script>
+<script>
+$('.subnav').click(()=>{
+	var a =$(this);
+	alert(a);
+ 	if (!a.hasClass('active'))
+	{
+    	a.addClass('active').siblings().removeClass('active');
+    	box.eq(a.index()).addClass('active').siblings().removeClass('active');
+	}
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

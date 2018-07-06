@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link class="nav-item" rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<link class="nav-item" href="css/bootstrap.css" rel="stylesheet">
+<link class="nav-item" href="styles.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body id="backg">
+<div class="col-xs-12">
+	<div align="right">
+	<div id='email'><img height="30" width="30" src="currentuser.png"><a>{email}</a></div>
+	<ul id="menu_" style="display:none">
+		<li><a id="logout">Logout</a></li>
+	</ul>
+	</div>
+<form>
+	<table width="100%">
+		<tr id="toplin" height="40">
+			<td class="col-xs-2"><img height="40" width="40" src="educadio.ico">&nbsp</td>
+			<td class="col-xs-2">My Panel</td>
+			<td style="display:{canAddUsers}" class="col-xs-2">+ Add Course</td>
+		</tr>
+	</table>
+	<table width="100%">
+		<tr>
+			<td id="themes">
+			<ul class="nav flex-column" id="myTab" role="tablist">
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#courses'" href="#courses"  aria-controls="courses"><img height="50" width="63" src="courses.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#workspace'" href="#workspace"  aria-controls="workspace" aria-selected="false"><img height="50" width="63" src="workspace.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#users'" href="#users" aria-controls="users"><img height="50" width="63" src="users.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#departments'" href="#departments" aria-controls="departments" aria-selected="false"><img height="50" width="63" src="departments.jpg"><br></a>
+				</li>
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#uploads'" href="#uploads" aria-controls="uploads" aria-selected="false"><img height="50" width="63" src="uploads.jpg"></a>
+				</li>
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#mobileupload'" href="#mobileupload" aria-controls="mobileupload" aria-selected="false"><img height="50" width="63" src="mobileupload.jpg"></a>
+				</li>
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#activity'" href="#activity" aria-controls="activity" aria-selected="false"><img height="50" width="63" src="activity.jpg"></a>
+				</li>
+				<li>
+					<a id="profile-tab" onclick="window.location.href = 'main#settings'" href="#settings" aria-controls="settings" aria-selected="false"><img height="50" width="63" src="settings.jpg"></a>
+				</li>
+			</ul>
+		</td>
+		<td id="content" class="col-xs-8">
+			<div class="sector" id="courses">COURSES</div>
+			<div class="sector" id="workspace">WORKSPACE</div>
+			<div class="sector" id="users">
+				<div class="tabs">
+					<ul class="nav tabs-nav nav-tabs justify-content-center">
+						<li class="subnav nav-item active">
+							<a class="nav-link">Users</a>
+						</li>
+						<li class="subnav nav-item">
+							<a class="nav-link">Connected</a>
+						</li>
+						<li class="subnav nav-item" id="userinfo">
+							<a class="nav-link">User</a>
+						</li>
+						<li><button text-align="right" class="btn" style="display:{canAddUsers}" id="mainbtn">Add new user</button></li>
+					</ul>
+					<div class="tabs-box">
+						<div class="active">
+							<table class="col-xs-12" style="background-color:white">
+								{#Users}
+								<tr>
+									<td class="col-xs-1"><img src="user.jpg"></td>
+									<td class="col-xs-7">
+									<a onclick="selectuser('{username}', '{status}')">{username}</a><br>
+									<div class="userdata">Department: department<br>
+									Role: {status}<br>
+									Last logged-in:date<br></div>
+									</td>
+									<td class="col-xs-2">
+									<fieldset class="rating">
+										<input type="radio" id="star5" name="rating" value="5" /><label for="star5">5 stars</label>
+										<input type="radio" id="star4" name="rating" value="4" /><label for="star4">4 stars</label>
+										<input type="radio" id="star3" name="rating" value="3" /><label for="star3">3 stars</label>
+										<input type="radio" id="star2" name="rating" value="2" /><label for="star2">2 stars</label>
+										<input type="radio" id="star1" name="rating" value="1" /><label for="star1">1 star</label>
+									</fieldset>
+									</td>
+									<td class="col-xs-1">
+									<a onclick="edit('{username}')">Edit</a>
+									</td>
+									<td class="col-xs-1">x</td>									
+								</tr>
+								{/Users}
+							</table>
+						</div>
+						<div>
+							CONNECTED
+						</div>
+						<div>
+							<p id="infousername">Username: </p>
+							<p id="infoposition">Position: </p>
+							<p>Enrolled in:</p>
+							<hr>
+							<p>Settings:</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sector" id="departments">DEPARTMENTS</div>
+			<div class="sector" id="uploads">MY UPLOADS</div>
+			<div class="sector" id="mobileupload">MOBILE UPLOAD</div>
+			<div class="sector" id="activity">ACTIVITY</div>
+			<div class="sector" id="settings">SETTINGS</div>
+		</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/my-tabs.js"></script>
+</body>
+</html>

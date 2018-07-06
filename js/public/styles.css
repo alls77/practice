@@ -1,0 +1,260 @@
+body
+{
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	font-family: LatoRegular;
+}
+
+#alignment
+{
+	width:100%;
+	height:100%;
+}
+
+.userdata
+{
+	font-size:9pt;
+}
+
+
+
+.rating {
+    float:left;
+}
+
+/* Конструкция :not(:checked) работает как фильтр, чтобы браузеры, которые не поддерживают псевдокласс :checked не применяли эти свойства. Все браузеры, поддерживающие псевдокласс :checked, поддерживают и псевдокласс :not(), так что фильтр должен отработать правильно. */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#aaa;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #4ec4ac;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #4ec4ac;;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #4ec4ac;;
+}
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+
+
+#backg
+{
+	background-image: url(background.jpg);
+	height:100%;
+	width:100%;
+}
+
+#content
+{
+	background-color:#eef1f4;
+	vertical-align:top;
+	padding-top:10mm;
+	padding-left:10mm;
+	padding-right:10mm;
+}
+
+#first_name_in
+{
+	border-radius:5px;
+}
+
+#mainbtn
+{
+	color:white;
+	background-color:#4f9dce;
+}
+
+#mainfrm
+{
+	background-color:white;
+	border-radius:5px;
+}
+
+#passwordfrm
+{
+	border-radius:5px;
+}
+
+#profile-tab:hover
+{
+	background-color:#4f9dce;
+}
+
+#profile-tab:active
+{
+	background-color:#4f9dce;
+}
+
+#signfrm
+{
+	vertical-align: center;
+	width:572px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#themes
+{
+	width:3%;
+	background-color:#2f3b4c;
+}
+
+#toplin
+{
+	background-color:#4ec4ac;
+	color:white;
+}
+
+#userinfo
+{
+	display:none;
+}
+
+.pointmenu
+{
+	height:60;
+	width:73;
+}
+
+.refs
+{
+	font-size: 11px;
+}
+
+.sector
+{
+	display:none;
+	vertical-align:top;
+}
+
+.sector:target
+{
+	display:block;
+}
+
+.tabs
+{
+	background-color:white;
+}
+
+.tabs-box > .active {
+    display: block;
+}
+
+.tabs-box > div {
+    display: none;
+}
+
+.tabs-nav li
+{
+	background-color: white;
+}
+
+.tabs-nav li.active
+{
+	background-color: blue;
+}
+
+@font-face
+{
+	font-family: "LatoRegular";
+	src: url("fonts/LatoRegular/LatoRegular.eot");
+	src: url("fonts/LatoRegular/LatoRegular.eot?#iefix")format("embedded-opentype"),
+	url("fonts/LatoRegular/LatoRegular.woff") format("woff"),
+	url("fonts/LatoRegular/LatoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face
+{
+	font-family: "LatoBold";
+	src: url("fonts/LatoBold/LatoBold.eot");
+	src: url("fonts/LatoBold/LatoBold.eot?#iefix")format("embedded-opentype"),
+	url("fonts/LatoBold/LatoBold.woff") format("woff"),
+	url("fonts/LatoBold/LatoBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face
+{
+	font-family: "LatoItalic";
+	src: url("fonts/LatoItalic/LatoItalic.eot");
+	src: url("fonts/LatoItalic/LatoItalic.eot?#iefix")format("embedded-opentype"),
+	url("fonts/LatoItalic/LatoItalic.woff") format("woff"),
+	url("fonts/LatoItalic/LatoItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face
+{
+	font-family: "LatoLight";
+	src: url("fonts/LatoLight/LatoLight.eot");
+	src: url("fonts/LatoLight/LatoLight.eot?#iefix")format("embedded-opentype"),
+	url("fonts/LatoLight/LatoLight.woff") format("woff"),
+	url("fonts/LatoLight/LatoLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face
+{
+	font-family: "LatoBoldItalic";
+	src: url("fonts/LatoBoldItalic/LatoBoldItalic.eot");
+	src: url("fonts/LatoBoldItalic/LatoBoldItalic.eot?#iefix")format("embedded-opentype"),
+	url("fonts/LatoBoldItalic/LatoBoldItalic.woff") format("woff"),
+	url("fonts/LatoBoldItalic/LatoBoldItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face
+{
+	font-family: "LatoLightItalic";
+	src: url("fonts/LatoLightItalic/LatoLightItalic.eot");
+	src: url("fonts/LatoLightItalic/LatoLightItalic.eot?#iefix")format("embedded-opentype"),
+	url("fonts/LatoLightItalic/LatoLightItalic.woff") format("woff"),
+	url("fonts/LatoLightItalic/LatoLightItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

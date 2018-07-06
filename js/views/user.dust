@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>{aim}</title>
+</head>
+<body onload="prepare()">
+<form id="{aimofform}">
+<p>LOGIN:</p>
+<input type="text" class="form-control" name="login" value="{login}">
+<p>E-MAIL:</p>
+<input type="text" class="form-control" name="email" value="{email}">
+<p>PASSWORD:</p>
+<input type="text" class="form-control" name="passw" value="{password}">
+<p>ROLE:</p>
+<select name="role">
+    <option selected value="teacher">Teacher</option>
+    <option value="manager">Manager</option>
+    <option value="admin">Admin</option>
+</select>
+<p><input type="submit" class="btn btn-primary" style="width:10%" name="register" value="OK"></p>
+</form>
+<script>
+    var prevLogin = "{login}";
+    var prevEmail = "{email}";
+    var prevPassword = "{password}";
+    var prevRole = "{role}";
+    function prepare()
+    {
+        if (prevLogin != "")
+        {
+            var registerForm = document.getElementById('edituser');
+            registerForm.elements['login'].value = prevLogin;
+            registerForm.elements['email'].value = prevEmail;
+            registerForm.elements['passw'].value = prevPassword;
+            registerForm.elements['role'].value = prevRole;
+        }
+        else if ('{aimofform}'=='register')
+        {
+            document.getElementById('register').disabled = 'disabled';
+        }
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/user.js"></script>
+</body>
+<html>
